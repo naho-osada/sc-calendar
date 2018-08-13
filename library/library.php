@@ -213,6 +213,9 @@ class scCalendarLibrary {
 	    $startDayw = date('w', strtotime('first day of ' . $dispYear . '-' . $dispMonth));
 
 	    // カレンダーの作成
+	    // スマホページャー用
+	    $calendarStringAry[] = '<span class="scPagerDisp">' .$this->setPager($SET_LANGUAGE, $SET_RANGE, $dispYear, $dispMonth) . '</span>';
+
 	    $calendarStringAry[] = '<table class="scCalendarTable">';
 	    $calendarStringAry[] = '<thead>';
 	    $calendarStringAry[] = '<tr>';

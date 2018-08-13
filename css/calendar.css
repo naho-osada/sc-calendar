@@ -60,7 +60,7 @@
 	/**
 	 * 日付の後ろの曜日の表示 1（月）
 	 */
-	.scWeekDisp {
+	.scWeekDisp, .scPagerDisp {
 		display : none;
 	}
 }
@@ -124,6 +124,13 @@
 		color : #555555;
 		padding : 20px;
 	}
+
+	/**
+	 * 上部ページャー表示
+	 */
+	 .scPagerDisp {
+	 	display: block;
+	 }
 }
 
 	.scCalendarSat {
