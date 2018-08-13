@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>カレンダー表示サンプル/SCCalendar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="./admin/css/style-admin.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/calendar.js"></script>
+</head>
+<body>
+	<header class="main-img"><img src="./admin/img/scCalendarImg.jpg" alt="SCCalendarヘッダー画像" /></header>
+	<div class="main">
+	    <h1>カレンダー表示サンプル</h1>
+	    <div class="contents"><p>カレンダーをサンプル表示しています。<br>
+	    &lt;head&gt;内でcalendar.cssとcalendar.jsをhead内に読み込ませます。パスは適宜修正してください。</p>
+	    <p>
+	        &lt;link rel="stylesheet" href="./css/calendar.css"&gt;<br>
+	        &lt;script type="text/javascript" src="./js/calendar.js"&gt;&lt;/script&gt;
+	    </p>
+	    <p>
+	    	本文中の表示したいところに<br>
+	    	&lt;div id="scCalendarMainArea" class="calendar-area">&lt;/div&gt;
+	    </p>
+	    </div>
+	    <div class="contents">
+	    <p>レスポンシブ対応をしています。画面幅799px以下でリスト表示になります。</p>
+	    <p>リスト表示にしたくない場合はcalendar.cssの該当箇所を編集してください。</p>
+	    </div>
+	    <h2>javascriptで呼び出し</h2>
+	    <div id="scCalendarMainArea" class="calendar-area"></div>
+	</div>
+	<footer class="footer-copy">&copy; 2018 <a href="https://wm-web-se-pg.com/" target="_blank">Naho Osada</a></footer>
+</body>
+</html>

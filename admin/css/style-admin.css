@@ -1,0 +1,241 @@
+/**
+ * SC Calendar 管理画面用CSS
+ * MITライセンスを使用しています。
+ * 詳しくはREADME.txtを参照してください。
+ *
+ * 作成者：Naho Osada（おさだなほ）
+ * https://wm-web-se-pg.com/
+ *
+ * 管理画面で使用されているものを変更できます。
+ * javascriptで使用している場合もあるので、クラス名、ID名の変更、削除は避けてください。
+ * ※追加は問題ありません。
+ */
+html {
+    overflow: auto;
+}
+body {
+	overflow: hidden;
+	background-color: #FFEEFF;
+	margin: 0px;
+}
+
+h1 {
+	background: linear-gradient(transparent 50%, #FF9900 50%);
+}
+
+h2 {
+	background: linear-gradient(transparent 50%, #FFCC00 50%);
+}
+
+@media screen and (min-width: 800px) {
+	a.scCalendarChangeData{
+		width: 100%;
+		height: 100%;
+		display: block;
+		padding:0.5em 0 0.5em 0;
+	}
+	.scCalendarData {
+		padding:0;
+	}
+	.main-img img{
+		width: auto;
+	}
+
+	dl {
+		overflow: hidden;
+		zoom: 1;
+	}
+	dt {
+		width: 25%;
+		float: left;
+		clear: both;
+	}
+	dd {
+		padding: 0 0 5 120;
+	}
+	.range {
+		text-indent:10;
+		width: 10%;
+	}
+
+	.sctitle, .admin-text {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	body {
+		font-size: 1.1em;
+	}
+	a.scCalendarChangeData{
+		width: 100%;
+		display: inline;
+		padding: 5px;
+	}
+
+	.main-img img{
+		width: 100%;
+	}
+
+	dt {
+		text-align: center;
+		font-weight: bold;
+	}
+	dd {
+		text-align: center;
+		margin: 0 0 10 0;
+	}
+
+	.sctitle, .admin-text {
+		width: 60%;
+		margin: 0 0 0 30;
+	}
+}
+
+.login-main {
+	max-width:1024px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	margin-bottom: 20%;
+	background-color: #FFFFFF;
+	border-radius:10px;
+	padding: 20px;
+}
+
+.main {
+	max-width:1024px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top: 20px;
+	margin-bottom: 0;
+	background-color: #FFFFFF;
+	border-radius:10px;
+	padding: 20px;
+}
+
+.main-img {
+	text-align:center;
+	background-color: #FFFFFF;
+	margin-top: 0;
+}
+
+.footer-copy {
+	text-align:center;
+	background-color: #FFFFFF;
+	margin-top: 20px;
+	font-size: 0.8em;
+	padding:30px;
+}
+
+.contents {
+	display:block;
+	border: dashed 2px #FF6699;
+	padding:5px;
+	margin: 15px;
+	background-color: #FFEEFF;
+	box-shadow: 0px 0px 0px 5px #FFEEFF;
+	border-radius: 20px;
+}
+
+.calendar-area, .admin-box {
+	display:block;
+	border: solid 1px #0066FF;
+	padding:20px;
+	border-radius: 20px;
+}
+
+.txt-red {
+	color: red;
+}
+
+.err-msg {
+	color: red;
+	font-weight: bold;
+	padding:5px;
+}
+
+.sctitle, .admin-text {
+	font-size: 1.1em;
+	border: solid 1px #AAAAAA;
+	border-radius: 5px;
+}
+
+.range {
+	font-size: 1.1em;
+	border: solid 1px #AAAAAA;
+	border-radius: 5px;
+}
+
+/**
+ * 更新、ログインボタン
+ */
+.scCalendarUpdate, .scCalendarLogin {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+input#scCalendarUpdate, #scCalendarLogin {
+	width: 100px;
+	height: 50px;
+	border-radius: 6px;
+	cursor: pointer;
+	background-color: #FF8856;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.scCalendarLogout {
+	padding: 10px 10px 0 0;
+	text-align: right;
+}
+.scCalendarLogout a{
+	text-decoration: none;
+	border: solid 1px #0066FF;
+	border-radius: 5px;
+	padding: 5px 20px 5px 20px;
+	font-weight: bold;
+	font-size: 1.1em;
+	background-color: #0066FF;
+	color: #FFFFFF;
+	border-bottom: solid 4px #627295;
+}
+
+.login-box dl {
+	overflow: hidden;
+	zoom: 1;
+	text-align: center;
+}
+.login-box dt {
+	width: 20%;
+	float: left;
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.login-box dd {
+	padding: 0 0 5 50;
+}
+
+/**
+ * ロード中
+ */
+#loading {
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #F3FFC2;
+	opacity: 0.8;
+}
+
+#loading .loadingMsg {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 140px;
+	background: url("../img/load.gif") center center no-repeat;
+}

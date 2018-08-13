@@ -1,0 +1,173 @@
+/**
+ * SC Calendar CSS
+ * MITライセンスを使用しています。
+ * 詳しくはREADME.txtを参照してください。
+ *
+ * 作成者：Naho Osada（おさだなほ）
+ * https://wm-web-se-pg.com/
+ *
+ * カレンダーの色などはここから変更できます。
+ * javascriptで使用している場合もあるので、クラス名、ID名の変更、削除は避けてください。
+ * ※追加は問題ありません。
+ */
+/**
+ * カレンダー全体の背景色と文字色設定
+ */
+.scCalendarMain {
+	max-width: 100%;
+	width: 450px;
+	height: auto;
+	color: #000080;
+	display: inline-block;
+	position: relative;
+}
+
+/**
+ * カレンダーの色設定など
+ */
+/**
+ * PC
+ */
+@media screen and (min-width: 800px) {
+	.scCalendarTable {
+		color: #000000;
+		border-collapse: collapse;
+		border: solid 1px #808080;
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
+		vertial-aligin: middle;
+	}
+	.scCalendarHead {
+		border: solid 1px #808080;
+		padding: 0.5em;
+		width: 10%;
+		background-color: #EEEEEE;
+	}
+	.scCalendarData {
+		border: solid 1px #808080;
+		padding: 0.5em;
+		background-color: #FFFFFF;
+	}
+
+	.scCalendarNext {
+		opacity: 0.5;
+	}
+	.scCalendarPrev {
+		opacity: 0.5;
+	}
+
+	/**
+	 * 日付の後ろの曜日の表示 1（月）
+	 */
+	.scWeekDisp {
+		display : none;
+	}
+}
+
+/**
+ * スマホ用レスポンシブ
+ **/
+@media screen and (max-width: 799px) {
+	.scCalendarTable {
+		color: #000000;
+		border-collapse: collapse;
+		border: solid 1px #808080;
+		width: 100%;
+		text-align: center;
+		vertial-aligin: middle;
+		display: fixed;
+		table-layout:fixed;
+	}
+
+	.scCalendarTable thead {
+		display: none;
+	}
+
+	.scCalendarTable .scCalendarPrev {
+        display: none
+    }
+
+	.scCalendarTable .scCalendarNext {
+        display: none
+    }
+
+    .scCalendarTable td {
+        display: block;
+        width: 100%;
+    }
+
+    .scCalendarTable td a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+	.scCalendarData {
+		border-top: solid 1px #808080;
+		background-color: #FFFFFF;
+		text-align : left;
+	}
+	/**
+	 * 日付の後ろの曜日の表示 1（月）
+	 */
+	.scWeekDisp {
+		display : inline;
+	}
+
+	.scDay {
+		padding : 5px;
+		pointer-events: none;
+	}
+
+	.scSpComment {
+		color : #555555;
+		padding : 20px;
+	}
+}
+
+	.scCalendarSat {
+		color: #005FFF;
+	}
+	.scCalendarSun {
+		color: #FF367F;
+	}
+	.scCalendarSat {
+		color: #005FFF;
+		background-color: #A4C6FF;
+	}
+	.scCalendarSun {
+		color: #FF367F;
+		background-color: #FFABCE;
+	}
+
+	.scCalendarEvent {
+		color: #FF4F02;
+		background-color: #FF9872;
+	}
+
+
+	/**
+	 * カレンダーの前の月、次の月
+	 */
+	.scCalendarLinks {
+		position: relative;
+		color: #FF367F;
+		padding: 10px 0 30px 0;
+	}
+	.scCalendarPrevLink {
+		float: left;
+	}
+	.scCalendarNextLink {
+		float: right;
+	}
+
+/**
+ * カレンダータイトル
+ */
+.scCalendarTitle {
+	color: #000000;
+	word-wrap:break-word;
+	width: 100%;
+	font-size:1.4em;
+}
