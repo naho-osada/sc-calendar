@@ -213,9 +213,6 @@ class scCalendarLibrary {
 	    $startDayw = date('w', strtotime('first day of ' . $dispYear . '-' . $dispMonth));
 
 	    // カレンダーの作成
-	    // スマホページャー用
-	    $calendarStringAry[] = '<span class="scPagerDisp">' .$this->setPager($SET_LANGUAGE, $SET_RANGE, $dispYear, $dispMonth) . '</span>';
-
 	    $calendarStringAry[] = '<table class="scCalendarTable">';
 	    $calendarStringAry[] = '<thead>';
 	    $calendarStringAry[] = '<tr>';
@@ -499,30 +496,18 @@ class scCalendarLibrary {
     	    }
 	    }
 
-	    $filename = dirname(__FILE__) . '/../admin/data/login.csv';
+	    $filename = dirname(__FILE__) . '/../admin/data/login.php';
 	    // ファイルがない場合は何もしない
 	    if(!file_exists($filename)) return false;
-
-	    $loginData = file_get_contents($filename);
-        $loginAry = explode("\r\n", $loginData);
-
-        $loginDatas = array();
-        foreach($loginAry as $ary) {
-            $strs = explode(',', $ary);
-            $loginDatas[str_replace('"', '', $strs[0])] = str_replace('"', '', $strs[1]);
-        }
+		require_once($filename);
 
         // 一致しない場合はエラー
-        if($id != $loginDatas['ID'] || $pass != $loginDatas['PASS']) {
+        if($id != SCID || $pass != SCPASS) {
             return false;
         }
 
         // ログインした情報の保存
-        $loginDate = time();
-        $loginStr = $loginDatas['PASS'] . $loginDate;
-        // クッキー保存するハッシュ
-        $choco = password_hash($loginStr, PASSWORD_DEFAULT);
-        // セッション保存するハッシュ（正解）
+        $choco = date('YmdHis', time());
         $hash = password_hash($choco, PASSWORD_DEFAULT);
         // ログインは1時間有効
         setcookie('choco', $choco ,time()+60*60);
