@@ -3,6 +3,8 @@ This software is released under the MIT License, see LICENSE.txt.
 *******************************************************************
 【SC Calendar】
 スケジュールカレンダーの無料配布版です。
+使い方の詳細はこちらに記述しています。
+https://wm-web-se-pg.com/publish-program/sc-calendar/
 
 ホームページ上で営業日などを表示したいと思うことはありませんか？
 そういったときに手軽に使えるカレンダーです。
@@ -29,6 +31,8 @@ This software is released under the MIT License, see LICENSE.txt.
 
 【稼働環境】
 PHP5.5以上（5.5、5.6、7.0、7.1で確認済み）
+
+Microsoft Edge / IE11 / FireFox / Chrome / Opera / Android8.1.0で動作確認済み
 
 ※SC CalendarはMITライセンスを使用しています。
 

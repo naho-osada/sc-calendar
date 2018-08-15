@@ -44,6 +44,9 @@
 		width: 10%;
 		background-color: #EEEEEE;
 	}
+	.scCalendarTable th{
+		text-align: center;
+	}
 	.scCalendarData {
 		border: solid 1px #808080;
 		padding: 0.5em;
@@ -60,7 +63,7 @@
 	/**
 	 * 日付の後ろの曜日の表示 1（月）
 	 */
-	.scWeekDisp, .scPagerDisp {
+	.scWeekDisp {
 		display : none;
 	}
 }
@@ -124,13 +127,6 @@
 		color : #555555;
 		padding : 20px;
 	}
-
-	/**
-	 * 上部ページャー表示
-	 */
-	 .scPagerDisp {
-	 	display: block;
-	 }
 }
 
 	.scCalendarSat {
