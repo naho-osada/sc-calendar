@@ -30,7 +30,7 @@ https://wm-web-se-pg.com/publish-program/sc-calendar/
 管理画面でカレンダー日付をクリックすると色が変わります。
 
 【稼働環境】
-PHP5.5以上（5.5、5.6、7.0、7.1で確認済み）
+PHP5.5以上（5.5、5.6、7.0、7.1、7.2で確認済み）
 
 Microsoft Edge / IE11 / FireFox / Chrome / Opera / Android8.1.0で動作確認済み
 
